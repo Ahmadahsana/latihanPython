@@ -77,3 +77,6 @@ for i in range(0, len(dataNama)):
     nama = dataNama[i]
     usia = dataUsia[i]
     print(f'{nama} usianya {usia}')
+
+
+print('baca ini')
