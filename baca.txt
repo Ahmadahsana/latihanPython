@@ -1,1 +1,2 @@
-okey
+pada shape
+keterangan : [panjang, lebar, RGB]
