@@ -1,1 +1,4 @@
 mengolah gambar RGB
+pada shape
+keterangan : [panjang, lebar, RGB]
+
