@@ -12,8 +12,8 @@ while True:
     height = int(cap.get(4))
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    lowerBlue = np.array([90, 50, 50])
-    upperBlue = np.array([130, 255, 255])
+    lowerBlue = np.array([90, 50, 50])  # B G R
+    upperBlue = np.array([130, 255, 255])  # R G B
 
     mask = cv2.inRange(hsv, lowerBlue, upperBlue)
 
