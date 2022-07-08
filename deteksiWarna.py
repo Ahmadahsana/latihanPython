@@ -1,4 +1,5 @@
 from turtle import width
+from unittest import result
 from matplotlib.pyplot import hsv
 import numpy as np
 import cv2
@@ -11,8 +12,14 @@ while True:
     height = int(cap.get(4))
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    lowerBlue = np.array([90, 50, 50])
+    upperBlue = np.array([130, 255, 255])
 
-    cv2.imshow('frame', frame)
+    mask = cv2.inRange(hsv, lowerBlue, upperBlue)
+
+    result = cv2.bitwise_and(frame, frame, mask=mask)
+
+    cv2.imshow('frame', result)
 
     if cv2.waitKey(1) == ord('q'):
         break
